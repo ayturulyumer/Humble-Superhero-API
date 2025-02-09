@@ -3,7 +3,7 @@ export default function SuperheroList({ superheroes }) {
         <div className="mt-8">
             <h2 className="text-2xl font-bold mb-4 border-b border-blue-500 text-gray-800">Superhero List</h2>
             {superheroes.length === 0 ? (
-                <p className="text-gray-500">No superheroes added yet</p>
+                <p className="text-gray-500">No superheroes added yet :(</p>
             ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {superheroes.map((hero, index) => (
