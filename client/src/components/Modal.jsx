@@ -23,8 +23,8 @@ export default function Modal({ isOpen, onClose, children }) {
 
   return (
     <div className="fixed inset-0 bg-black/80  backdrop-blur-sm flex justify-center items-center z-50">
-      <div ref={modalRef} className="bg-white rounded-lg p-6 w-full max-w-md shadow-xl">
-        <button onClick={onClose} className="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
+      <div ref={modalRef} className="bg-white mx-4 rounded-lg p-6 w-full max-w-md shadow-xl">
+        <button onClick={onClose} className="absolute  top-2 right-2 text-gray-500 hover:text-gray-700">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"

@@ -67,7 +67,7 @@ export default function SuperheroForm({ onAddSuperhero }) {
             {error && <p className="text-red-500 text-sm">{error}</p>}
             <button
                 type="submit"
-                className="w-full  cursor-pointer bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-2 px-4 rounded-md hover:from-indigo-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-200"
+                className="w-full   cursor-pointer bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-2 px-4 rounded-3xl hover:from-indigo-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-200"
             >
                 Add Superhero
             </button>
