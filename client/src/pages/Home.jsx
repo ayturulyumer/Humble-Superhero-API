@@ -1,11 +1,32 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import SuperheroForm from '../components/SuperHeroForm.jsx'
 import SuperheroList from '../components/SuperHeroList.jsx'
 import Modal from '../components/Modal.jsx'
+import * as request from "../lib/request.js"
 
 export default function Home() {
     const [superheroes, setSuperheroes] = useState([])
     const [isModalOpen, setIsModalOpen] = useState(false)
+
+    // This must be in env file in real life scenario
+    const URL = "http://localhost:3000/api"
+
+
+    useEffect(() => {
+        const fetchSuperheroes = async () => {
+            try {
+                const result = await request.get(`${URL}/superheroes`);
+                setSuperheroes(result);
+            } catch (error) {
+                console.error("Failed to fetch superheroes:", error);
+            }
+        };
+
+        fetchSuperheroes();
+    }, []);
+
+
+
 
     const addSuperhero = (newSuperhero) => {
         setSuperheroes(prevSuperheroes =>
