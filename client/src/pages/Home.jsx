@@ -9,7 +9,7 @@ export default function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false)
 
     // This must be in env file in real life scenario
-    const URL = "http://localhost:3000/api"
+    const URL = "https://humble-superhero-api-backend.vercel.app/api"
 
 
     // Fetch all superheroes 
