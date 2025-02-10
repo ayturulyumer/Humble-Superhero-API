@@ -7,6 +7,7 @@ import * as request from "../lib/request.js"
 export default function Home() {
     const [superheroes, setSuperheroes] = useState([])
     const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
 
     // This must be in env file in real life scenario
     const URL = "https://humble-superhero-api-backend.vercel.app/api"
@@ -15,6 +16,7 @@ export default function Home() {
     // Fetch all superheroes 
     useEffect(() => {
         const fetchSuperheroes = async () => {
+            setIsLoading(true)
             try {
                 const response = await request.get(`${URL}/superheroes`);
                 if (response.data) {
@@ -25,6 +27,8 @@ export default function Home() {
             } catch (error) {
                 console.error("An error occurred while fetching superheroes:", error);
                 setError("Failed to load superheroes. Please try again later.");
+            } finally {
+                setIsLoading(false)
             }
         };
 
@@ -69,7 +73,7 @@ export default function Home() {
                             </button>
                         </div>
                         <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Superhero Humility Tracker</h1>
-                        <SuperheroList superheroes={superheroes} />
+                        <SuperheroList isLoading={isLoading} superheroes={superheroes} />
                     </div>
                 </div>
             </div>
