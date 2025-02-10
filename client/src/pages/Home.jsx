@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import SuperheroForm from '../components/SuperHeroForm.jsx'
+import SuperheroForm from '../components/SuperheroForm.jsx'
 import SuperheroList from '../components/SuperHeroList.jsx'
 import Modal from '../components/Modal.jsx'
 import * as request from "../lib/request.js"
@@ -12,7 +12,7 @@ export default function Home() {
     const URL = "http://localhost:3000/api"
 
 
-    // Fetch all superheroes on mount
+    // Fetch all superheroes 
     useEffect(() => {
         const fetchSuperheroes = async () => {
             try {
