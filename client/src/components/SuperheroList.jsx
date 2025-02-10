@@ -9,7 +9,7 @@ export default function SuperheroList({ isLoading, superheroes }) {
     }
 
     if (superheroes.length === 0) {
-        return <p className="text-center text-gray-600">No superheroes found.</p>;
+        return <p className="text-center text-gray-600">No superheroes found {`:(`}</p>;
     }
 
 
