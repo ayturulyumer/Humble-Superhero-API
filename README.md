@@ -9,6 +9,7 @@
 **If I had more time:**
 
 - Integrate a real database
+- Add more endpoints for updating/deleting superhero
 - Add user authentication
 - Add swagger documentation
 - Implement pagination
