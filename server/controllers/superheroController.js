@@ -2,7 +2,7 @@ const router = require("express").Router();
 const superheroService = require("../services/superheroServices.js");
 const validateSuperheroData = require("../utils/validateSuperheroData.js");
 
-// Endpoint for getting all superheroes
+// Endpoint for getting all superheroes by descending humility
 router.get("/", (req, res) => {
   try {
     const superheroes = superheroService.getAllbyDescendingHumility();

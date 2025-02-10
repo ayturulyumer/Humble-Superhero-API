@@ -2,7 +2,7 @@ const express = require("express");
 const configureServer = require("./config/server.js");
 const routes = require("./routes.js");
 
-// Define a port
+// In real-life scenarios, the port  should be stored in env file
 const PORT = 3000;
 const app = express();
 
