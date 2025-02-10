@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import SuperheroForm from '../components/SuperheroForm.jsx'
-import SuperheroList from '../components/SuperHeroList.jsx'
+import SuperheroList from '../components/SuperheroList.jsx'
 import Modal from '../components/Modal.jsx'
 import * as request from "../lib/request.js"
 
